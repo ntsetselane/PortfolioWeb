@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #18181b;
+    --primary: #18181b;
+    --primary-foreground: #ffffff;
+    --muted: #71717a;
+    --border: #f4f4f5;
+    --radius: 0.5rem;
+    --accent: #f4f4f5;
+}
+
+.theme-dark {
+    --background: #09090b;
+    --foreground: #fafafa;
+    --primary: #fafafa;
+    --primary-foreground: #18181b;
+    --muted: #a1a1aa;
+    --border: #27272a;
+    --radius: 0.5rem;
+    --accent: #27272a;
+}
+
+.theme-cyber {
+    --background: #050505;
+    --foreground: #00ff9f;
+    --primary: #00ff9f;
+    --primary-foreground: #050505;
+    --muted: #008f5a;
+    --border: #00ff9f33;
+    --radius: 0rem;
+    --accent: #ff0055;
+}
+
+.theme-nordic {
+    --background: #eceff4;
+    --foreground: #2e3440;
+    --primary: #5e81ac;
+    --primary-foreground: #eceff4;
+    --muted: #4c566a;
+    --border: #d8dee9;
+    --radius: 1rem;
+    --accent: #88c0d0;
+}
+
+.theme-drake {
+    --background: #1f1f1f;
+    --foreground: #ffffff;
+    --primary: #28e98c;
+    --primary-foreground: #1f1f1f;
+    --muted: #999999;
+    --border: rgba(255, 255, 255, 0.1);
+    --card: #252525;
+    --radius: 2rem;
+    --accent: #28e98c;
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.drake-sidebar {
+    background: #1f1f1f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drake-badge {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.drake-nav-vertical {
+    background: #1f1f1f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    padding: 1rem 0.5rem;
+}
+
+.drake-circle-text {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
